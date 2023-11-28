@@ -9,13 +9,13 @@ trivy plugin install github.com/aquasecurity/trivy-output-plugin-count
 ## Usage
 
 ```shell
-trivy image --format json --output plugin=count [--output-plugin-arg plugin_flags] <image_name>
+trivy <target> --format json --output plugin=count [--output-plugin-arg plugin_flags] <target_name>
 ```
 
 OR
 
 ```shell
-trivy image -f json <image_name> | trivy count [plugin_flags]
+trivy <target> -f json <target_name> | trivy count [plugin_flags]
 ```
 
 ## Examples
