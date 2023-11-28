@@ -1,21 +1,31 @@
-# trivy-plugin-template
-Template for Trivy plugins
-
-**NOTE: Replace <org_name>, <repository_name> and <plugin_name> in go.mod, goreleaser.yaml and plugin.yaml with the appropriate values.**
+# trivy-output-plugin-count
+Example of Trivy output plugin
 
 ## Installation
 ```shell
-trivy plugin install github.com/<org_name>/<repository_name>
+trivy plugin install github.com/aquasecurity/trivy-output-plugin-count
 ```
 
 ## Usage
 
 ```shell
-trivy image --format json --output plugin=<plugin_name> [--output-plugin-arg plugin_flags] <image_name>
+trivy image --format json --output plugin=count [--output-plugin-arg plugin_flags] <image_name>
 ```
 
 OR
 
 ```shell
-trivy image -f json <image_name> | trivy <plugin_name> [plugin_flags]
+trivy image -f json <image_name> | trivy count [plugin_flags]
+```
+
+## Examples
+
+```shell
+trivy image -f json -o plugin=count --output-plugin-arg "--published-after=2023-11-01" debian:12
+```
+
+is equivalent to:
+
+```shell
+trivy image -f json debian:12 | trivy count --published-after=2023-11-01
 ```
