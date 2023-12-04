@@ -18,6 +18,12 @@ func main() {
 }
 
 func run() error {
+	// First we read Stdin to avoid Trivy freezing if we get an error
+	var report types.Report
+	if err := json.NewDecoder(os.Stdin).Decode(&report); err != nil {
+		return err
+	}
+
 	publishedBefore := flag.String("published-before", "", "take vulnerabilities published before the specified timestamp (ex. 2019-11-04)")
 	publishedAfter := flag.String("published-after", "", "take vulnerabilities published after the specified timestamp (ex. 2019-11-04)")
 	flag.Parse()
@@ -35,11 +41,6 @@ func run() error {
 		if err != nil {
 			return err
 		}
-	}
-
-	var report types.Report
-	if err := json.NewDecoder(os.Stdin).Decode(&report); err != nil {
-		return err
 	}
 
 	var count int
