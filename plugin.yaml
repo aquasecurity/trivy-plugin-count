@@ -4,6 +4,7 @@ version: "0.2.0"
 usage: Count vulnerabilities
 description: |-
   An example output plugin
+output: true
 platforms:
   - selector:
       os: darwin
