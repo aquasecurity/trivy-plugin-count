@@ -1,9 +1,9 @@
-# trivy-output-plugin-count
+# trivy-plugin-count
 Example of Trivy output plugin
 
 ## Installation
 ```shell
-trivy plugin install github.com/aquasecurity/trivy-output-plugin-count
+trivy plugin install github.com/aquasecurity/trivy-plugin-count
 ```
 
 ## Usage

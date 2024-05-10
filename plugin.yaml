@@ -1,6 +1,6 @@
 name: "count"
-repository: github.com/aquasecurity/trivy-output-plugin-count
-version: "0.1.0"
+repository: github.com/aquasecurity/trivy-plugin-count
+version: "0.2.0"
 usage: Count vulnerabilities
 description: |-
   An example output plugin
@@ -8,20 +8,20 @@ platforms:
   - selector:
       os: darwin
       arch: amd64
-    uri: https://github.com/aquasecurity/trivy-output-plugin-count/releases/download/v0.1.0/trivy_output_plugin_count_0.1.0_darwin-amd64.tar.gz
+    uri: https://github.com/aquasecurity/trivy-plugin-count/releases/download/v0.2.0/trivy_plugin_count_0.2.0_darwin-amd64.tar.gz
     bin: ./count
   - selector:
       os: darwin
       arch: arm64
-    uri: https://github.com/aquasecurity/trivy-output-plugin-count/releases/download/v0.1.0/trivy_output_plugin_count_0.1.0_darwin-arm64.tar.gz
+    uri: https://github.com/aquasecurity/trivy-plugin-count/releases/download/v0.2.0/trivy_plugin_count_0.2.0_darwin-arm64.tar.gz
     bin: ./count
   - selector:
       os: linux
       arch: amd64
-    uri: https://github.com/aquasecurity/trivy-output-plugin-count/releases/download/v0.1.0/trivy_output_plugin_count_0.1.0_linux-amd64.tar.gz
+    uri: https://github.com/aquasecurity/trivy-plugin-count/releases/download/v0.2.0/trivy_plugin_count_0.2.0_linux-amd64.tar.gz
     bin: ./count
   - selector:
       os: linux
       arch: arm64
-    uri: https://github.com/aquasecurity/trivy-output-plugin-count/releases/download/v0.1.0/trivy_output_plugin_count_0.1.0_linux-arm64.tar.gz
+    uri: https://github.com/aquasecurity/trivy-plugin-count/releases/download/v0.2.0/trivy_plugin_count_0.2.0_linux-arm64.tar.gz
     bin: ./count

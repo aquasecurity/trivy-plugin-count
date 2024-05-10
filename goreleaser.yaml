@@ -1,4 +1,4 @@
-project_name: trivy_output_plugin_count
+project_name: trivy_plugin_count
 builds:
   -
     main: .
